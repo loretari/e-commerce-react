@@ -7,6 +7,7 @@
 
 }
 
+
 .nav-logo {
    display: flex;
     align-items: center;
@@ -28,6 +29,7 @@
 }
 
 .nav-menu {
+
    display: flex;
     align-items: center;
     list-style: none;
@@ -38,7 +40,13 @@
 
 }
 
+.nav-menu Link{
+text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
 .nav-menu li{
+    color:rgb(255, 255, 255);
    display: flex;
     flex-direction: column;
     align-items: center;

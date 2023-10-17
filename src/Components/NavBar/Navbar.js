@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './Navbar.css';
 import logo from '../Assets/logo_Smile2.png'
+import {Link} from "react-router-dom";
 
 // import logo from '../Assets/logo_Smile.jpg'
 // import logo from '../Assets/logo_.png';
@@ -13,21 +14,36 @@ const NavBar = () => {
     return (
 <div className= "navbar">
 <div className= "nav-logo">
-    <img src={logo} alt= "logo"/>
-    <p>Lor_DesIgn</p>
+    <Link style={{textDecoration: 'none'}} to='/'><img src={logo} alt= "logo"/></Link>
+    <Link style={{textDecoration: 'none'}} to='/'><p>Lor_DesIgn</p></Link>
 </div>
     <ul className= "nav-menu">
-        <li onClick={() => {setMenu("shop")}}>Shop By {menu==="shop" ? <hr/>:<></>}</li>
-        <li onClick={() => {setMenu ("clothings")}}>Clothing {menu==="clothings" ? <hr/>:<></>}</li>
-        <li onClick={() => {setMenu ("shoes")}}>Shoes {menu==="shoes" ? <hr/>:<></>}</li>
-        <li onClick={() => {setMenu ("bags")}}>Bags {menu==="bags" ? <hr/>:<></>}</li>
+        <li onClick={() => {setMenu("shop")}}>
+            <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to= '/'>
+                Shop By
+            </Link> {menu==="shop" ? <hr/>:<></>}</li>
+        <li onClick={() => {setMenu ("clothings")}}>
+            <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to={'/clothings'}>
+                Clothing
+            </Link> {menu==="clothings" ? <hr/>:<></>}</li>
+        <li onClick={() => {setMenu ("shoes")}}>
+            <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to='/shoes'>
+                Shoes
+            </Link> {menu==="shoes" ? <hr/>:<></>}</li>
+        <li onClick={() => {setMenu ("bags")}}>
+            <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to='/bags'>
+            Bags
+            </Link>{menu==="bags" ? <hr/>:<></>}</li>
     </ul>
     <div className= "nav-login-cart">
-        <button>Login</button>
+        <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to='/login'><button>Login</button></Link>
         {/*<img src={cart_icon} alt= "cart" />*/}
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M16 6v2h2l2 12H0L2 8h2V6a6 6 0 1 1 12 0zm-2 0a4 4 0 1 0-8 0v2h8V6zM4 10v2h2v-2H4zm10 0v2h2v-2h-2z" />
-        </svg>
+        <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to= '/cart'>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M16 6v2h2l2 12H0L2 8h2V6a6 6 0 1 1 12 0zm-2 0a4 4 0 1 0-8 0v2h8V6zM4 10v2h2v-2H4zm10 0v2h2v-2h-2z" />
+            </svg>
+        </Link>
+
         <div className= "nav-cart-count">0</div>
     </div>
 </div>
