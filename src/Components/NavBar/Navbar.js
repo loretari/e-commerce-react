@@ -22,10 +22,10 @@ const NavBar = () => {
             <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to= '/'>
                 Shop By
             </Link> {menu==="shop" ? <hr/>:<></>}</li>
-        <li onClick={() => {setMenu ("clothings")}}>
-            <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to={'/clothings'}>
+        <li onClick={() => {setMenu ("clothing")}}>
+            <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to={'/clothing'}>
                 Clothing
-            </Link> {menu==="clothings" ? <hr/>:<></>}</li>
+            </Link> {menu==="clothing" ? <hr/>:<></>}</li>
         <li onClick={() => {setMenu ("shoes")}}>
             <Link style={{textDecoration: 'none', color: 'rgb(255, 255, 255)'}} to='/shoes'>
                 Shoes
