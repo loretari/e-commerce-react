@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, { useState} from 'react';
 import './Navbar.css';
 import logo from '../Assets/logo_Smile2.png'
 import {Link} from "react-router-dom";
